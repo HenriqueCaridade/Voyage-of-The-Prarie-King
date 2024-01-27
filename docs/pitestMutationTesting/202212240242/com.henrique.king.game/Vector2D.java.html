@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=windows-1252">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>Vector2D.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package com.henrique.king.game;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>public class Vector2D {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    public static final Vector2D V_NULL = new Vector2D(0, 0);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    public static final Vector2D V_UP = new Vector2D(0, -1);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    public static final Vector2D V_DOWN = new Vector2D(0, 1);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    public static final Vector2D V_LEFT = new Vector2D(-1, 0);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    public static final Vector2D V_RIGHT = new Vector2D(1, 0);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    public static final Vector2D V_UP_LEFT = new Vector2D(-1, -1);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    public static final Vector2D V_UP_RIGHT = new Vector2D(1, -1);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    public static final Vector2D V_DOWN_LEFT = new Vector2D(-1, 1);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    public static final Vector2D V_DOWN_RIGHT = new Vector2D(1, 1);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private int x, y;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    public Vector2D(int x, int y){</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        this.x = x;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        this.y = y;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    public Vector2D(Vector2D a){</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        x = a.getX();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        y = a.getY();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public String toString(){</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_23'/>
+23
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_23'>1</a>
+<span>
+
+1. toString : replaced return value with &#34;&#34; for com/henrique/king/game/Vector2D::toString &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return &#34;(&#34;+x+&#34;,&#34;+y+&#34;)&#34;;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_25'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public int getX() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_26'/>
+26
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_26'>1</a>
+<span>
+
+1. getX : replaced int return with 0 for com/henrique/king/game/Vector2D::getX &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return x;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_27'/>
+27
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_27'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_28'/>
+28
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_28'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public int getY() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_29'/>
+29
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_29'>1</a>
+<span>
+
+1. getY : replaced int return with 0 for com/henrique/king/game/Vector2D::getY &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return y;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_30'/>
+30
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_30'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_31'/>
+31
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_31'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void setX(int a) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_32'/>
+32
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_32'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        x = a;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_33'/>
+33
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_33'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_34'/>
+34
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_34'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void setY(int b) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_35'/>
+35
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_35'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        y = b;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_36'/>
+36
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_36'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_37'/>
+37
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_37'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public boolean equals(Object a) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_38'/>
+38
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_38'>2</a>
+<span>
+
+1. equals : negated conditional &rarr; KILLED<br/>
+
+2. equals : replaced boolean return with false for com/henrique/king/game/Vector2D::equals &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (this == a) return true;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_39'/>
+39
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_39'>2</a>
+<span>
+
+1. equals : replaced boolean return with true for com/henrique/king/game/Vector2D::equals &rarr; SURVIVED<br/>
+
+2. equals : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        if (a == null) return false;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_40'/>
+40
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_40'>2</a>
+<span>
+
+1. equals : replaced boolean return with true for com/henrique/king/game/Vector2D::equals &rarr; NO_COVERAGE<br/>
+
+2. equals : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        if (getClass() != a.getClass()) return false;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_41'/>
+41
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_41'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        Vector2D p = (Vector2D) a;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_42'/>
+42
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_42'>3</a>
+<span>
+
+1. equals : negated conditional &rarr; KILLED<br/>
+
+2. equals : negated conditional &rarr; KILLED<br/>
+
+3. equals : replaced boolean return with true for com/henrique/king/game/Vector2D::equals &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return x == p.getX() &#38;&#38; y == p.getY();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_43'/>
+43
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_43'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_44'/>
+44
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_44'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public Vector2D add(Vector2D pos) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_45'/>
+45
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_45'>3</a>
+<span>
+
+1. add : Replaced integer addition with subtraction &rarr; KILLED<br/>
+
+2. add : Replaced integer addition with subtraction &rarr; KILLED<br/>
+
+3. add : replaced return value with null for com/henrique/king/game/Vector2D::add &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return new Vector2D(this.x + pos.x, this.y + pos.y);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_46'/>
+46
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_46'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_47'/>
+47
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_47'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public Vector2D sub(Vector2D pos) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_48'/>
+48
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_48'>3</a>
+<span>
+
+1. sub : Replaced integer subtraction with addition &rarr; KILLED<br/>
+
+2. sub : Replaced integer subtraction with addition &rarr; KILLED<br/>
+
+3. sub : replaced return value with null for com/henrique/king/game/Vector2D::sub &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return new Vector2D(this.x - pos.x, this.y - pos.y);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_49'/>
+49
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_49'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_50'/>
+50
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_50'>3</a>
+<span>
+
+1. mult : Replaced integer multiplication with division &rarr; KILLED<br/>
+
+2. mult : Replaced integer multiplication with division &rarr; KILLED<br/>
+
+3. mult : replaced return value with null for com/henrique/king/game/Vector2D::mult &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    public Vector2D mult(int a){ return  new Vector2D(this.x * a, this.y * a); }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_51'/>
+51
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_51'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public Vector2D euclideanNormalise(){</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_52'/>
+52
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_52'>1</a>
+<span>
+
+1. euclideanNormalise : replaced return value with null for com/henrique/king/game/Vector2D::euclideanNormalise &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return new Vector2D((int) Math.signum(x), (int) Math.signum(y));</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_53'/>
+53
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_53'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@581918f6_54'/>
+54
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_54'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@581918f6_23'>23</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_23'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>toString<br/><b>Killed by : </b>com.henrique.king.game.Vector2DTester.[engine:junit-jupiter]/[class:com.henrique.king.game.Vector2DTester]/[method:toStringTest()]</span></span> replaced return value with &#34;&#34; for com/henrique/king/game/Vector2D::toString &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@581918f6_26'>26</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_26'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getX<br/><b>Killed by : </b>com.henrique.king.game.Vector2DTester.[engine:junit-jupiter]/[class:com.henrique.king.game.Vector2DTester]/[method:subTest()]</span></span> replaced int return with 0 for com/henrique/king/game/Vector2D::getX &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@581918f6_29'>29</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_29'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getY<br/><b>Killed by : </b>com.henrique.king.game.Vector2DTester.[engine:junit-jupiter]/[class:com.henrique.king.game.Vector2DTester]/[method:subTest()]</span></span> replaced int return with 0 for com/henrique/king/game/Vector2D::getY &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@581918f6_38'>38</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_38'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.henrique.king.controller.game.MonsterControllerTester.[engine:junit-jupiter]/[class:com.henrique.king.controller.game.MonsterControllerTester]/[method:monsterCollisionFalseTest()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.henrique.king.game.elements.ElementTester.[engine:junit-jupiter]/[class:com.henrique.king.game.elements.ElementTester]/[method:getPosTest()]</span></span> replaced boolean return with false for com/henrique/king/game/Vector2D::equals &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@581918f6_39'>39</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_39'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.henrique.king.game.elements.BulletTester.[engine:junit-jupiter]/[class:com.henrique.king.game.elements.BulletTester]/[method:moveTesterXAxisTest()]</span></span> negated conditional &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> replaced boolean return with true for com/henrique/king/game/Vector2D::equals &rarr; SURVIVED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@581918f6_40'>40</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_40'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.henrique.king.game.elements.BulletTester.[engine:junit-jupiter]/[class:com.henrique.king.game.elements.BulletTester]/[method:moveTesterXAxisTest()]</span></span> negated conditional &rarr; KILLED</p> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> replaced boolean return with true for com/henrique/king/game/Vector2D::equals &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@581918f6_42'>42</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_42'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.henrique.king.game.elements.BulletTester.[engine:junit-jupiter]/[class:com.henrique.king.game.elements.BulletTester]/[method:moveTesterXAxisTest()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.henrique.king.game.elements.BulletTester.[engine:junit-jupiter]/[class:com.henrique.king.game.elements.BulletTester]/[method:moveTesterXAxisTest()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>com.henrique.king.controller.game.MonsterControllerTester.[engine:junit-jupiter]/[class:com.henrique.king.controller.game.MonsterControllerTester]/[method:monsterCollisionFalseTest()]</span></span> replaced boolean return with true for com/henrique/king/game/Vector2D::equals &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@581918f6_45'>45</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_45'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>add<br/><b>Killed by : </b>com.henrique.king.game.Vector2DTester.[engine:junit-jupiter]/[class:com.henrique.king.game.Vector2DTester]/[method:addTest()]</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>add<br/><b>Killed by : </b>com.henrique.king.game.Vector2DTester.[engine:junit-jupiter]/[class:com.henrique.king.game.Vector2DTester]/[method:addTest()]</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>add<br/><b>Killed by : </b>com.henrique.king.game.Vector2DTester.[engine:junit-jupiter]/[class:com.henrique.king.game.Vector2DTester]/[method:addTest()]</span></span> replaced return value with null for com/henrique/king/game/Vector2D::add &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@581918f6_48'>48</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_48'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>sub<br/><b>Killed by : </b>com.henrique.king.game.Vector2DTester.[engine:junit-jupiter]/[class:com.henrique.king.game.Vector2DTester]/[method:subTest()]</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>sub<br/><b>Killed by : </b>com.henrique.king.game.Vector2DTester.[engine:junit-jupiter]/[class:com.henrique.king.game.Vector2DTester]/[method:subTest()]</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>sub<br/><b>Killed by : </b>com.henrique.king.game.Vector2DTester.[engine:junit-jupiter]/[class:com.henrique.king.game.Vector2DTester]/[method:subTest()]</span></span> replaced return value with null for com/henrique/king/game/Vector2D::sub &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@581918f6_50'>50</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_50'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>mult<br/><b>Killed by : </b>com.henrique.king.game.Vector2DTester.[engine:junit-jupiter]/[class:com.henrique.king.game.Vector2DTester]/[method:multTest()]</span></span> Replaced integer multiplication with division &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>mult<br/><b>Killed by : </b>com.henrique.king.game.Vector2DTester.[engine:junit-jupiter]/[class:com.henrique.king.game.Vector2DTester]/[method:multTest()]</span></span> Replaced integer multiplication with division &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>mult<br/><b>Killed by : </b>com.henrique.king.game.Vector2DTester.[engine:junit-jupiter]/[class:com.henrique.king.game.Vector2DTester]/[method:multTest()]</span></span> replaced return value with null for com/henrique/king/game/Vector2D::mult &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@581918f6_52'>52</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@581918f6_52'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>euclideanNormalise<br/><b>Killed by : </b>com.henrique.king.game.Vector2DTester.[engine:junit-jupiter]/[class:com.henrique.king.game.Vector2DTester]/[method:euclideanNormaliseTest()]</span></span> replaced return value with null for com/henrique/king/game/Vector2D::euclideanNormalise &rarr; KILLED</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+
+<li class='mutator'>CONDITIONALS_BOUNDARY</li>
+
+<li class='mutator'>EMPTY_RETURNS</li>
+
+<li class='mutator'>FALSE_RETURNS</li>
+
+<li class='mutator'>INCREMENTS</li>
+
+<li class='mutator'>INVERT_NEGS</li>
+
+<li class='mutator'>MATH</li>
+
+<li class='mutator'>NEGATE_CONDITIONALS</li>
+
+<li class='mutator'>NULL_RETURNS</li>
+
+<li class='mutator'>PRIMITIVE_RETURNS</li>
+
+<li class='mutator'>TRUE_RETURNS</li>
+
+<li class='mutator'>VOID_METHOD_CALLS</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>com.henrique.king.game.ArenaTester.[engine:junit-jupiter]/[class:com.henrique.king.game.ArenaTester]/[method:inBoundsTest()] (1 ms)</li><li>com.henrique.king.game.elements.ElementTester.[engine:junit-jupiter]/[class:com.henrique.king.game.elements.ElementTester]/[method:setPosTest()] (1 ms)</li><li>com.henrique.king.controller.game.KingControllerTester.[engine:junit-jupiter]/[class:com.henrique.king.controller.game.KingControllerTester]/[method:moveKingDOWN_LEFTTest()] (11 ms)</li><li>com.henrique.king.gui.LanternaGUITester.[engine:junit-jupiter]/[class:com.henrique.king.gui.LanternaGUITester]/[method:getActionsShootUpLeftTest()] (14 ms)</li><li>com.henrique.king.controller.game.KingControllerTester.[engine:junit-jupiter]/[class:com.henrique.king.controller.game.KingControllerTester]/[method:moveKingLEFTTest()] (10 ms)</li><li>com.henrique.king.game.elements.ElementTester.[engine:junit-jupiter]/[class:com.henrique.king.game.elements.ElementTester]/[method:getPosTest()] (0 ms)</li><li>com.henrique.king.game.Vector2DTester.[engine:junit-jupiter]/[class:com.henrique.king.game.Vector2DTester]/[method:subTest()] (0 ms)</li><li>com.henrique.king.game.Vector2DTester.[engine:junit-jupiter]/[class:com.henrique.king.game.Vector2DTester]/[method:settersTest()] (0 ms)</li><li>com.henrique.king.controller.game.KingControllerTester.[engine:junit-jupiter]/[class:com.henrique.king.controller.game.KingControllerTester]/[method:moveKingDOWNTest()] (13 ms)</li><li>com.henrique.king.viewer.game.BulletViewerTester.[engine:junit-jupiter]/[class:com.henrique.king.viewer.game.BulletViewerTester]/[method:drawTest()] (5 ms)</li><li>com.henrique.king.game.elements.BulletTester.[engine:junit-jupiter]/[class:com.henrique.king.game.elements.BulletTester]/[method:moveTesterXAxisTest()] (5 ms)</li><li>com.henrique.king.gui.LanternaGUITester.[engine:junit-jupiter]/[class:com.henrique.king.gui.LanternaGUITester]/[method:drawImageTest()] (39 ms)</li><li>com.henrique.king.game.elements.BulletTester.[engine:junit-jupiter]/[class:com.henrique.king.game.elements.BulletTester]/[method:moveTesterYAxisTest()] (6 ms)</li><li>com.henrique.king.gui.LanternaGUITester.[engine:junit-jupiter]/[class:com.henrique.king.gui.LanternaGUITester]/[method:getActionsUpRightTest()] (8 ms)</li><li>com.henrique.king.controller.game.MonsterControllerTester.[engine:junit-jupiter]/[class:com.henrique.king.controller.game.MonsterControllerTester]/[method:chooseDirectionNotConfusedTest()] (4 ms)</li><li>com.henrique.king.gui.LanternaGUITester.[engine:junit-jupiter]/[class:com.henrique.king.gui.LanternaGUITester]/[method:getActionsUpLeftTest()] (10 ms)</li><li>com.henrique.king.gui.LanternaGUITester.[engine:junit-jupiter]/[class:com.henrique.king.gui.LanternaGUITester]/[method:getActionsShootDownLeftTest()] (13 ms)</li><li>com.henrique.king.controller.game.KingControllerTester.[engine:junit-jupiter]/[class:com.henrique.king.controller.game.KingControllerTester]/[method:tickTest()] (6 ms)</li><li>com.henrique.king.controller.game.BossControllerTester.[engine:junit-jupiter]/[class:com.henrique.king.controller.game.BossControllerTester]/[method:chooseDirectionNotConfusedTest()] (7 ms)</li><li>com.henrique.king.gui.LanternaGUITester.[engine:junit-jupiter]/[class:com.henrique.king.gui.LanternaGUITester]/[method:getActionsDownLeftTest()] (7 ms)</li><li>com.henrique.king.controller.game.BossControllerTester.[engine:junit-jupiter]/[class:com.henrique.king.controller.game.BossControllerTester]/[method:moveBossTest()] (10 ms)</li><li>com.henrique.king.gui.LanternaGUITester.[engine:junit-jupiter]/[class:com.henrique.king.gui.LanternaGUITester]/[method:getActionsShootRightTest()] (8 ms)</li><li>com.henrique.king.viewer.game.BossViewerTester.[engine:junit-jupiter]/[class:com.henrique.king.viewer.game.BossViewerTester]/[method:drawTest()] (9 ms)</li><li>com.henrique.king.controller.game.ArenaControllerTester.[engine:junit-jupiter]/[class:com.henrique.king.controller.game.ArenaControllerTester]/[method:monsterHitKingTest()] (25 ms)</li><li>com.henrique.king.game.Vector2DTester.[engine:junit-jupiter]/[class:com.henrique.king.game.Vector2DTester]/[method:toStringTest()] (3 ms)</li><li>com.henrique.king.gui.LanternaGUITester.[engine:junit-jupiter]/[class:com.henrique.king.gui.LanternaGUITester]/[method:getActionsDownRightTest()] (9 ms)</li><li>com.henrique.king.game.Vector2DTester.[engine:junit-jupiter]/[class:com.henrique.king.game.Vector2DTester]/[method:multTest()] (0 ms)</li><li>com.henrique.king.viewer.game.KingViewerTester.[engine:junit-jupiter]/[class:com.henrique.king.viewer.game.KingViewerTester]/[method:drawTest()] (4 ms)</li><li>com.henrique.king.controller.game.BossControllerTester.[engine:junit-jupiter]/[class:com.henrique.king.controller.game.BossControllerTester]/[method:chooseDirectionConfusedTest()] (5 ms)</li><li>com.henrique.king.viewer.game.ItemViewerTester.[engine:junit-jupiter]/[class:com.henrique.king.viewer.game.ItemViewerTester]/[method:drawHeartTest()] (5 ms)</li><li>com.henrique.king.controller.game.KingControllerTester.[engine:junit-jupiter]/[class:com.henrique.king.controller.game.KingControllerTester]/[method:moveKingUP_LEFTTest()] (10 ms)</li><li>com.henrique.king.controller.game.ArenaControllerTester.[engine:junit-jupiter]/[class:com.henrique.king.controller.game.ArenaControllerTester]/[method:bossHitKingTest()] (11 ms)</li><li>com.henrique.king.viewer.game.ItemViewerTester.[engine:junit-jupiter]/[class:com.henrique.king.viewer.game.ItemViewerTester]/[method:drawWheelTest()] (3 ms)</li><li>com.henrique.king.controller.game.MonsterControllerTester.[engine:junit-jupiter]/[class:com.henrique.king.controller.game.MonsterControllerTester]/[method:monsterCollisionTrueTest()] (7 ms)</li><li>com.henrique.king.game.ArenaTester.[engine:junit-jupiter]/[class:com.henrique.king.game.ArenaTester]/[method:useItemTest()] (73 ms)</li><li>com.henrique.king.gui.LanternaGUITester.[engine:junit-jupiter]/[class:com.henrique.king.gui.LanternaGUITester]/[method:getActionsSimultaneousActionsTest()] (8 ms)</li><li>com.henrique.king.gui.LanternaGUITester.[engine:junit-jupiter]/[class:com.henrique.king.gui.LanternaGUITester]/[method:getActionsShootUpRightTest()] (13 ms)</li><li>com.henrique.king.game.elements.BulletTester.[engine:junit-jupiter]/[class:com.henrique.king.game.elements.BulletTester]/[method:moveTesterDiagonallyTest()] (6 ms)</li><li>com.henrique.king.controller.game.KingControllerTester.[engine:junit-jupiter]/[class:com.henrique.king.controller.game.KingControllerTester]/[method:moveKingDOWN_RIGHTTest()] (9 ms)</li><li>com.henrique.king.viewer.game.GameViewerTester.[engine:junit-jupiter]/[class:com.henrique.king.viewer.game.GameViewerTester]/[method:drawHeartsTest()] (19 ms)</li><li>com.henrique.king.gui.LanternaGUITester.[engine:junit-jupiter]/[class:com.henrique.king.gui.LanternaGUITester]/[method:getActionsShootDownRightTest()] (16 ms)</li><li>com.henrique.king.game.ArenaTester.[engine:junit-jupiter]/[class:com.henrique.king.game.ArenaTester]/[method:canMoveToTest()] (1 ms)</li><li>com.henrique.king.controller.game.MonsterControllerTester.[engine:junit-jupiter]/[class:com.henrique.king.controller.game.MonsterControllerTester]/[method:monsterCollisionFalseTest()] (4 ms)</li><li>com.henrique.king.controller.game.ArenaControllerTester.[engine:junit-jupiter]/[class:com.henrique.king.controller.game.ArenaControllerTester]/[method:tickTest()] (155 ms)</li><li>com.henrique.king.viewer.game.GameViewerTester.[engine:junit-jupiter]/[class:com.henrique.king.viewer.game.GameViewerTester]/[method:drawElementsTest()] (37 ms)</li><li>com.henrique.king.gui.LanternaGUITester.[engine:junit-jupiter]/[class:com.henrique.king.gui.LanternaGUITester]/[method:getActionsShootDownTest()] (10 ms)</li><li>com.henrique.king.gui.LanternaGUITester.[engine:junit-jupiter]/[class:com.henrique.king.gui.LanternaGUITester]/[method:getActionsLeftTest()] (6 ms)</li><li>com.henrique.king.game.Vector2DTester.[engine:junit-jupiter]/[class:com.henrique.king.game.Vector2DTester]/[method:euclideanNormaliseTest()] (1 ms)</li><li>com.henrique.king.game.Vector2DTester.[engine:junit-jupiter]/[class:com.henrique.king.game.Vector2DTester]/[method:addTest()] (0 ms)</li><li>com.henrique.king.gui.LanternaGUITester.[engine:junit-jupiter]/[class:com.henrique.king.gui.LanternaGUITester]/[method:getActionsDownTest()] (3 ms)</li><li>com.henrique.king.gui.LanternaGUITester.[engine:junit-jupiter]/[class:com.henrique.king.gui.LanternaGUITester]/[method:getActionsUpTest()] (5 ms)</li><li>com.henrique.king.controller.game.ArenaControllerTester.[engine:junit-jupiter]/[class:com.henrique.king.controller.game.ArenaControllerTester]/[method:killMonsterTest()] (383 ms)</li><li>com.henrique.king.gui.LanternaGUITester.[engine:junit-jupiter]/[class:com.henrique.king.gui.LanternaGUITester]/[method:getActionsShootLeftTest()] (7 ms)</li><li>com.henrique.king.controller.game.BossControllerTester.[engine:junit-jupiter]/[class:com.henrique.king.controller.game.BossControllerTester]/[method:moveBossCannotMoveTest()] (5 ms)</li><li>com.henrique.king.controller.game.MonsterControllerTester.[engine:junit-jupiter]/[class:com.henrique.king.controller.game.MonsterControllerTester]/[method:chooseDirectionConfusedTest()] (5 ms)</li><li>com.henrique.king.game.Vector2DTester.[engine:junit-jupiter]/[class:com.henrique.king.game.Vector2DTester]/[method:copyConstructorTest()] (0 ms)</li><li>com.henrique.king.viewer.game.ItemViewerTester.[engine:junit-jupiter]/[class:com.henrique.king.viewer.game.ItemViewerTester]/[method:drawConfuseTest()] (3 ms)</li><li>com.henrique.king.gui.LanternaGUITester.[engine:junit-jupiter]/[class:com.henrique.king.gui.LanternaGUITester]/[method:getActionsRightTest()] (5 ms)</li><li>com.henrique.king.gui.LanternaGUITester.[engine:junit-jupiter]/[class:com.henrique.king.gui.LanternaGUITester]/[method:getActionsShootUpTest()] (6 ms)</li><li>com.henrique.king.viewer.game.MonsterViewerTester.[engine:junit-jupiter]/[class:com.henrique.king.viewer.game.MonsterViewerTester]/[method:drawTest()] (4 ms)</li><li>com.henrique.king.controller.game.KingControllerTester.[engine:junit-jupiter]/[class:com.henrique.king.controller.game.KingControllerTester]/[method:moveKingUPTest()] (11 ms)</li><li>com.henrique.king.controller.game.KingControllerTester.[engine:junit-jupiter]/[class:com.henrique.king.controller.game.KingControllerTester]/[method:moveKingRIGHTTest()] (5 ms)</li><li>com.henrique.king.controller.game.KingControllerTester.[engine:junit-jupiter]/[class:com.henrique.king.controller.game.KingControllerTester]/[method:moveKingUP_RIGHTTest()] (8 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='http://pitest.org'>PIT</a> 1.9.4
+
+</body>
+</html>
